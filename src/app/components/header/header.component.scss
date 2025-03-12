@@ -1,0 +1,6 @@
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  ul {display: flex; flex-direction: row; li{list-style: none; text-decoration: none;} gap: 5px;}
+}
