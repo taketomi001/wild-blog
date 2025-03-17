@@ -1,8 +1,8 @@
-<!-- <div>@if(articles.length > 0){ -->
+
 <div>
     @for (article of articles; track $index) {
     @if(article.isPublished){
-        <div [class]="{'popular-article': article.likeCount >200}">
+    <div [ngClass]="{'popular-article': article.likeCount >200}">
         <h1>
             {{ article.title }}
         </h1>
@@ -13,8 +13,9 @@
         <p>date : {{article.createdAt}}</p>
         <p>❤️ : {{article.likeCount}}</p>
     </div>
-    }@else{pas d'article}
-        } @empty {
-        <h1>Aucun article disponible</h1>
+    }
+    @else{pas d'article}
+    } @empty {
+    <h1>Aucun article disponible</h1>
     }
 </div>

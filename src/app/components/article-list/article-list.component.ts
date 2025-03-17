@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Article } from '../../model/article.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-article-list',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './article-list.component.html',
   styleUrl: './article-list.component.scss',
 })
