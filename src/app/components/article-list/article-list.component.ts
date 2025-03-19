@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Article } from '../../model/article.model';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-article-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './article-list.component.html',
   styleUrl: './article-list.component.scss',
 })
@@ -44,5 +45,6 @@ export class ArticleListComponent {
       isLiked: false
     }
   ];
+ 
 }
 

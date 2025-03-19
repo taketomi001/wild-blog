@@ -12,9 +12,10 @@
         </p>
         <p>date : {{article.createdAt}}</p>
         <p>❤️ : {{article.likeCount}}</p>
+        <a [routerLink]="['/article', article.id]">Voir l'article</a>
     </div>
     }
-    @else{pas d'article}
+    <!-- @else{pas d'article} -->
     } @empty {
     <h1>Aucun article disponible</h1>
     }
