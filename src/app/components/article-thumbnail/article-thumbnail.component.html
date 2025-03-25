@@ -1,0 +1,15 @@
+
+    @if(article.isPublished){
+    <div [ngClass]="{'popular-article': article.likeCount >200}">
+        <h1>
+            {{ article.title }}
+        </h1>
+        <img [src]="article.image" alt="">
+        <p>
+            contenu : {{article.content}}
+        </p>
+        <p>date : {{article.createdAt}}</p>
+        <p>❤️ : {{article.likeCount}}</p>
+        <a [routerLink]="['/article', article.id]">Voir l'article</a>
+    </div>
+    }

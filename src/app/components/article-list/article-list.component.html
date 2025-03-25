@@ -1,22 +1,7 @@
 
 <div>
     @for (article of articles; track $index) {
-    @if(article.isPublished){
-    <div [ngClass]="{'popular-article': article.likeCount >200}">
-        <h1>
-            {{ article.title }}
-        </h1>
-        <img [src]="article.image" alt="">
-        <p>
-            contenu : {{article.content}}
-        </p>
-        <p>date : {{article.createdAt}}</p>
-        <p>❤️ : {{article.likeCount}}</p>
-        <a [routerLink]="['/article', article.id]">Voir l'article</a>
-    </div>
-    }
-    <!-- @else{pas d'article} -->
-    } @empty {
-    <h1>Aucun article disponible</h1>
-    }
+        <app-article-thumbnail [article]="article"></app-article-thumbnail>
+    } 
 </div>
+

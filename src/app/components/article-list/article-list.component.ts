@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Article } from '../../model/article.model';
-import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+// import { CommonModule } from '@angular/common';
+// import { RouterLink } from '@angular/router';
+import { ArticleThumbnailComponent } from '../article-thumbnail/article-thumbnail.component';
 
 @Component({
   selector: 'app-article-list',
-  imports: [CommonModule, RouterLink],
+  imports: [ ArticleThumbnailComponent],
   templateUrl: './article-list.component.html',
   styleUrl: './article-list.component.scss',
 })
 export class ArticleListComponent {
+  
   articles: Article[] = [
+    
     {
       id: 1,
       title: 'Premier article',
@@ -45,6 +48,6 @@ export class ArticleListComponent {
       isLiked: false
     }
   ];
- 
+
 }
 
