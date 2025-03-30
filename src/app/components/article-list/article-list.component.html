@@ -1,7 +1,13 @@
 
 <div>
     @for (article of articles; track $index) {
-        <app-article-thumbnail [article]="article"></app-article-thumbnail>
+        <app-article-thumbnail [article]="article" (notifyParent)="handleNotification($event)" ></app-article-thumbnail>
+        <p>{{ messageFromChild }}</p>
+       
+    
     } 
 </div>
+
+
+
 

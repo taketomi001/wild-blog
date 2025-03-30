@@ -1,12 +1,10 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { Article } from '../../model/article.model';
-// import { CommonModule } from '@angular/common';
-// import { RouterLink } from '@angular/router';
 import { ArticleThumbnailComponent } from '../article-thumbnail/article-thumbnail.component';
 
 @Component({
   selector: 'app-article-list',
-  imports: [ ArticleThumbnailComponent],
+  imports: [ArticleThumbnailComponent],
   templateUrl: './article-list.component.html',
   styleUrl: './article-list.component.scss',
 })
@@ -48,6 +46,11 @@ export class ArticleListComponent {
       isLiked: false
     }
   ];
-
+  messageFromChild: string = '';
+  handleNotification(message: string) {
+    this.messageFromChild = message;
+    
+  }
+  
 }
 

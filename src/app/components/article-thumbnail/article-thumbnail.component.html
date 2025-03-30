@@ -9,7 +9,9 @@
             contenu : {{article.content}}
         </p>
         <p>date : {{article.createdAt}}</p>
-        <p>❤️ : {{article.likeCount}}</p>
+        <p><button (click)="sendNotification()">
+           {{article.isLiked ?  "♥" : "♡" }}</button> : {{article.likeCount}}</p>
         <a [routerLink]="['/article', article.id]">Voir l'article</a>
+        
     </div>
     }
