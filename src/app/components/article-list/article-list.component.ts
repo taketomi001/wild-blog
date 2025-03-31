@@ -46,11 +46,16 @@ export class ArticleListComponent {
       isLiked: false
     }
   ];
-  messageFromChild: string = '';
-  handleNotification(message: string) {
-    this.messageFromChild = message;
+  // messageFromChild: string = '';
+  // handleNotification(message: string) {
+  //   this.messageFromChild = message;
     
-  }
-  
+  // }
+  updateLikeStatus(articleId: number) {
+    const article = this.articles.find(a => a.id === articleId);
+    if (article) {
+      article.isLiked = !article.isLiked;  
+    }
+  }  
 }
 

@@ -13,10 +13,10 @@ import { Article } from '../../model/article.model';
 })
 export class ArticleThumbnailComponent {
   @Input() article!: Article;
-  @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
+  @Output() notifyParent: EventEmitter<void> = new EventEmitter<void>();
+  isLiked: boolean = false; 
   sendNotification() {
-    this.article.isLiked = !this.article.isLiked;
-    this.article.isLiked ? this.notifyParent.emit("déja liker") : this.notifyParent.emit("") ;
-
+    this.isLiked = !this.isLiked;
+    this.notifyParent.emit(); 
   }
 }
