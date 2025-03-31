@@ -11,6 +11,7 @@
         <p>date : {{article.createdAt}}</p>
         <p><button (click)="sendNotification()">
            {{article.isLiked ?  "♥" : "♡" }}</button> : {{article.likeCount}}</p>
+           <p>{{article.isLiked ?  "liker" : "" }}</p>
         <a [routerLink]="['/article', article.id]">Voir l'article</a>
         
     </div>
