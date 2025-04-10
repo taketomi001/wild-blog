@@ -54,7 +54,8 @@ export class ArticleListComponent {
   updateLikeStatus(articleId: number) {
     const article = this.articles.find(a => a.id === articleId);
     if (article) {
-      article.isLiked = !article.isLiked;  
+      article.isLiked = !article.isLiked; 
+      article.likeCount += article.isLiked ? 1 : -1; 
     }
   }  
 }
